@@ -10,17 +10,17 @@ export default {
     setup(props, context) {
         const newTask = ref('');
         const addTask = () => {
-            const tempTodo={
-                name:newTask.value,
-                id:Date.now(),
-                status:'active'
+            const tempTodo = {
+                name: newTask.value,
+                id: Date.now(),
+                status: 'active'
             }
-            context.emit('newTask',tempTodo)
-            newTask.value=''
+            context.emit('newTask', tempTodo)
+            newTask.value = ''
         }
-        return{
+        return {
             newTask,
-            addTask 
+            addTask
         }
     }
 
@@ -42,8 +42,8 @@ export default {
 input {
     border: 1px solid black;
     border-radius: 4px;
-width: 410px;
-padding: 10px;
+    width: 410px;
+    padding: 10px;
 }
 
 button {
